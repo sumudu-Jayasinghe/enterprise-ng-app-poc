@@ -1,0 +1,282 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "optimo-coporate-client": {
+      "root": "apps/optimo-coporate-client/",
+      "sourceRoot": "apps/optimo-coporate-client/src",
+      "projectType": "application",
+      "prefix": "enterprise-ng-app-poc",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "preserveSymlinks": true,
+            "outputPath": "dist/apps/optimo-coporate-client",
+            "index": "apps/optimo-coporate-client/src/index.html",
+            "main": "apps/optimo-coporate-client/src/main.ts",
+            "polyfills": "apps/optimo-coporate-client/src/polyfills.ts",
+            "tsConfig": "apps/optimo-coporate-client/tsconfig.app.json",
+            "assets": [
+              "apps/optimo-coporate-client/src/favicon.ico",
+              "apps/optimo-coporate-client/src/assets"
+            ],
+            "styles": [
+              "apps/optimo-coporate-client/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/optimo-coporate-client/src/environments/environment.ts",
+                  "with": "apps/optimo-coporate-client/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "optimo-coporate-client:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "optimo-coporate-client:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "optimo-coporate-client:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/optimo-coporate-client/src/test.ts",
+            "polyfills": "apps/optimo-coporate-client/src/polyfills.ts",
+            "tsConfig": "apps/optimo-coporate-client/tsconfig.spec.json",
+            "karmaConfig": "apps/optimo-coporate-client/karma.conf.js",
+            "styles": [
+              "apps/optimo-coporate-client/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/optimo-coporate-client/src/favicon.ico",
+              "apps/optimo-coporate-client/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/optimo-coporate-client/tsconfig.app.json",
+              "apps/optimo-coporate-client/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "optimo-coporate-client-e2e": {
+      "root": "apps/optimo-coporate-client-e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/optimo-coporate-client-e2e/protractor.conf.js",
+            "devServerTarget": "optimo-coporate-client:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "optimo-coporate-client:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/optimo-coporate-client-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "optimo-crm-client": {
+      "root": "apps/optimo-crm-client/",
+      "sourceRoot": "apps/optimo-crm-client/src",
+      "projectType": "application",
+      "prefix": "enterprise-ng-app-poc",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/optimo-crm-client",
+            "index": "apps/optimo-crm-client/src/index.html",
+            "main": "apps/optimo-crm-client/src/main.ts",
+            "polyfills": "apps/optimo-crm-client/src/polyfills.ts",
+            "tsConfig": "apps/optimo-crm-client/tsconfig.app.json",
+            "assets": [
+              "apps/optimo-crm-client/src/favicon.ico",
+              "apps/optimo-crm-client/src/assets"
+            ],
+            "styles": [
+              "apps/optimo-crm-client/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/optimo-crm-client/src/environments/environment.ts",
+                  "with": "apps/optimo-crm-client/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "optimo-crm-client:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "optimo-crm-client:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "optimo-crm-client:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/optimo-crm-client/src/test.ts",
+            "polyfills": "apps/optimo-crm-client/src/polyfills.ts",
+            "tsConfig": "apps/optimo-crm-client/tsconfig.spec.json",
+            "karmaConfig": "apps/optimo-crm-client/karma.conf.js",
+            "styles": [
+              "apps/optimo-crm-client/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/optimo-crm-client/src/favicon.ico",
+              "apps/optimo-crm-client/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/optimo-crm-client/tsconfig.app.json",
+              "apps/optimo-crm-client/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "optimo-crm-client-e2e": {
+      "root": "apps/optimo-crm-client-e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/optimo-crm-client-e2e/protractor.conf.js",
+            "devServerTarget": "optimo-crm-client:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "optimo-crm-client:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/optimo-crm-client-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "client-search": {
+      "root": "libs/client-search",
+      "sourceRoot": "libs/client-search/src",
+      "projectType": "library",
+      "prefix": "opt",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/client-search/src/test.ts",
+            "tsConfig": "libs/client-search/tsconfig.spec.json",
+            "karmaConfig": "libs/client-search/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/client-search/tsconfig.lib.json",
+              "libs/client-search/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false,
+      "versionMismatch": false
+    },
+    "defaultCollection": "@nrwl/schematics"
+  },
+  "defaultProject": "optimo-coporate-client"
+}

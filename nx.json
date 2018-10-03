@@ -1,0 +1,27 @@
+{
+  "npmScope": "enterprise-ng-app-poc",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "optimo-coporate-client": {
+      "tags": []
+    },
+    "optimo-coporate-client-e2e": {
+      "tags": []
+    },
+    "optimo-crm-client": {
+      "tags": []
+    },
+    "optimo-crm-client-e2e": {
+      "tags": []
+    },
+    "client-search": {
+      "tags": []
+    }
+  }
+}
