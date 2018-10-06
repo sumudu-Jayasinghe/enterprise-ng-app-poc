@@ -1,0 +1,17 @@
+{
+  "extends": "../../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "enterprise-ng-app-poc",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "enterprise-ng-app-poc",
+      "kebab-case"
+    ]
+  }
+}

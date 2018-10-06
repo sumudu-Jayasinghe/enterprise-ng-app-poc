@@ -10,7 +10,10 @@
   ],
   "include": [
     "**/*.ts"
-  
+
     , "../../libs/client-search/src/index.ts"
+
+    , "../../libs/client-setup/src/index.ts"
+    , "../../libs/shared/shared-components/src/index.ts"
 ]
 }

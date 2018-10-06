@@ -18,6 +18,15 @@
     "paths": {
       "@enterprise-ng-app-poc/client-search": [
         "libs/client-search/src/index.ts"
+      ],
+      "@enterprise-ng-app-poc/client-setup": [
+        "libs/client-setup/src/index.ts"
+      ],
+      "@enterprise-ng-app-poc/shared/shared-components": [
+        "libs/shared/shared-components/src/index.ts"
+      ],
+      "@enterprise-ng-app-poc/shared/shared-services": [
+        "libs/shared/shared-services/src/index.ts"
       ]
     }
   },

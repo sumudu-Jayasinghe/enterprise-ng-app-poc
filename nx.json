@@ -22,6 +22,15 @@
     },
     "client-search": {
       "tags": []
+    },
+    "client-setup": {
+      "tags": []
+    },
+    "shared-shared-components": {
+      "tags": []
+    },
+    "shared-shared-services": {
+      "tags": []
     }
   }
 }
